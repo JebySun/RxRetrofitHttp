@@ -1,8 +1,9 @@
 package com.jebysun.android.rxjavaretrofit.demo;
 
-public interface MainIView {
+import com.jebysun.android.rxjavaretrofit.base.BaseView;
+
+public interface MainIView extends BaseView {
 
     void onSuccess(String msg);
-    void onFailure(int errCode, String msg);
 
 }

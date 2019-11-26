@@ -27,7 +27,7 @@ public class MainPresenter extends BasePresenter {
 
             @Override
             public void onFailure(int code, String errMsg, Throwable throwable) {
-                view.onFailure(code, errMsg);
+                view.onFailure(errMsg);
             }
         });
     }
@@ -43,7 +43,7 @@ public class MainPresenter extends BasePresenter {
 
             @Override
             public void onFailure(int code, String errMsg, Throwable throwable) {
-                view.onFailure(code, errMsg);
+                view.onFailure(errMsg);
             }
         });
     }

@@ -31,7 +31,7 @@ public class BaseModel {
      * @param callback
      * @param <T>
      */
-    public <T> void doSubscribe(Observable<Result<T>> observable, final RequestCallback<T> callback) {
+    public <T> void doSubscribe(Observable<Result<T>> observable, RequestCallback<T> callback) {
         Disposable disposable = observable
                 .compose(RxHelper.<Result<T>>switchThread())
                 .compose(RxHelper.<T>resultData())

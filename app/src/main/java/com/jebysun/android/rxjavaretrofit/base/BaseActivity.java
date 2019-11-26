@@ -2,8 +2,9 @@ package com.jebysun.android.rxjavaretrofit.base;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity implements BaseView {
 
     private BasePresenter presenter;
 
@@ -14,9 +15,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         presenter = initPresenter();
     }
 
-
-    public abstract BasePresenter initPresenter();
-
     @Override
     protected void onDestroy() {
         if (presenter != null) {
@@ -24,4 +22,16 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
         super.onDestroy();
     }
+
+
+    ///////////////////////////////////////////////////////
+
+    public abstract BasePresenter initPresenter();
+
+    @Override
+    public void onFailure(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
 }
+

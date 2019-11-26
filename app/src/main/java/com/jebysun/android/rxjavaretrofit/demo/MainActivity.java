@@ -2,7 +2,6 @@ package com.jebysun.android.rxjavaretrofit.demo;
 
 import android.os.Bundle;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.jebysun.android.rxjavaretrofit.R;
 import com.jebysun.android.rxjavaretrofit.base.BaseActivity;
@@ -34,15 +33,9 @@ public class MainActivity extends BaseActivity implements MainIView {
         return presenter;
     }
 
-
     @Override
     public void onSuccess(String msg) {
         tvInfo.setText(msg);
-    }
-
-    @Override
-    public void onFailure(int errCode, String msg) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
 }
