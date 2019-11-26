@@ -1,5 +1,6 @@
 package com.jebysun.android.rxjavaretrofit.demo;
 
+import com.jebysun.android.rxjavaretrofit.http.APIContants;
 import com.jebysun.android.rxjavaretrofit.http.Result;
 
 import io.reactivex.Observable;
@@ -15,7 +16,7 @@ public interface XXXHttpService {
      * 返回OKhttp原始ResponseBody
      * @return
      */
-    @GET("https://www.cnblogs.com/babycomeon/p/11895483.html")
+    @GET(value = APIContants.HMTL_PAGE)
     Observable<ResponseBody> getHTMLPage();
 
     /**
@@ -24,7 +25,7 @@ public interface XXXHttpService {
      * @return
      */
     @FormUrlEncoded
-    @POST("http://101.200.63.140/api/Gift/giftList")
+    @POST(value = APIContants.JSON_DATA)
     Observable<Result<String>> giftList(@Field("paramholder") String paramHolder);
 
 }

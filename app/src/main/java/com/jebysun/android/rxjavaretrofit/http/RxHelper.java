@@ -13,6 +13,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
+import retrofit2.HttpException;
 
 public class RxHelper {
 
@@ -92,6 +93,9 @@ public class RxHelper {
         }
         else if (throwable instanceof TimeoutException || throwable instanceof SocketTimeoutException) {
             callback.onFailure(-110, "网络超时", throwable);
+        }
+        else if (throwable instanceof HttpException) {
+            callback.onFailure(-110, "网络响应异常" + throwable.getMessage(), throwable);
         }
         // 其他异常
         else {

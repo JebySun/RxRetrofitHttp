@@ -69,6 +69,7 @@ public class RxRetrofitClient {
                 .client(builder.build())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
+                // TODO 使用BuildConfig字段配置
                 .baseUrl("https://test.qiuqiuyuliao.com/")
                 .build();
     }
