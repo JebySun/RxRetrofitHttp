@@ -1,4 +1,4 @@
-package com.jebysun.android.rxjavaretrofit.demo;
+package com.jebysun.android.rxjavaretrofit.module.demo;
 
 import android.os.Bundle;
 import android.widget.TextView;

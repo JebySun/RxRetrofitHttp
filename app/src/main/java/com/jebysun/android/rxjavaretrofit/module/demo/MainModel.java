@@ -1,4 +1,4 @@
-package com.jebysun.android.rxjavaretrofit.demo;
+package com.jebysun.android.rxjavaretrofit.module.demo;
 
 import com.jebysun.android.rxjavaretrofit.base.BaseModel;
 import com.jebysun.android.rxjavaretrofit.http.RequestCallback;
